@@ -2,6 +2,7 @@
 let form = document.getElementById("transaction-form")
 let balanceAmount = document.getElementById("account-balance")
 let transactionLog = document.getElementById("transaction-log")
+let resetButton = document.getElementById('reset-button')
 // Setting a starting balance
 let balance = 0.00
 let transactionNumber = 0
@@ -29,8 +30,15 @@ form.onsubmit = (e) => {
     e.preventDefault()
 }
 
+resetButton.onclick = () => {
+    balance = 0
+    transactionNumber= 0
+    transactionArr = []
+    renderBalance()
+    renderTransactionTable
+}
+
 function handleTransaction(transaction){
-    console.log(transaction) 
 
     transactionNumber += 1
 
@@ -52,8 +60,7 @@ function handleTransaction(transaction){
     // Adds final k:v to the object
     currentTransaction.postBalance = balance
     transactionArr.push(currentTransaction)
-    console.log(currentTransaction)
-    console.log(transactionArr)
+   
 }
 
 function renderBalance(){
