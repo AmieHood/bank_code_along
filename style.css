@@ -14,6 +14,12 @@
     padding-top: 30px;
 }
 
+#account-balance {
+    color: #9AB278;
+    font-size: 40px;
+    font-weight: 700;
+}
+
 .form-container {
     padding: 15px;
 }
@@ -22,9 +28,26 @@
     margin-right: 10px;
 }
 
-.transaction-button {
+#transaction-button {
     float: right;
     max-width: 120px;
     min-width: 80px;
     margin-right: 10px;
+}
+
+#amount {
+    display: inline-block;
+    margin-left: 5px;
+    height: 32px;
+}
+
+#amount-input {
+    display: flex;
+    font-weight: 600;
+
+}
+
+#amount-input p {
+    font-size: 24px;
+    font-weight: 600;
 }
